@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>CV</title>
+</head>
+<body>
+    <div class="wrapper">
+    <header class="header">
+        <div id="my-name">
+            <a><h1>Zemnovich Ruslan</h1></a>
+        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+            <section class="left">
+                <div class="skills">
+                <h2><a id="skills">Skills</a></h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>Data Analysis</li>
+                    <li>Git</li>
+                    <li>OOP</li>
+                    <li>Figma</li>
+                    <li>English B1</li>
+                </ul>
+                </div>
+                <div class="code"> 
+                <h2><a id="works">Code example</a></h2>
+                <code class="code">
+@transaction.atomic()
+def auto_payment_unpaid(user: User):
+    unpaid_orders = Order.objects.filter(user=user,
+                     status=Order.STATUS_WAITING_PAYMENT
+                     )
+    for order in unpaid_orders:
+    if Payment.get_balance(user) &lt order.amount:
+                            break
+    order.payment = Payment.objects.all().last()
+    order.status = Order.STATUS_PAID
+    order.save()
+    Payment.objects.create(user=user, amount=-order.amount)
+                </code>
+            </div>
+            <img src="https://alexandrdrozdfd.github.io/rsschool-cv/assets/icons/rss.svg" alt="rs-logo">
+    </section>
+
+            <div class="education">
+                <h2><a id="education">Education</a></h2>
+                <table class="education-table">
+                    <tr>
+                        <th>12/2022 - now<br/>
+                            Rolling Scopes School
+                        </th>
+                        <th>Java Script</th>
+                    </tr>
+                    <tr>
+                        <th>2019 - now<br/>
+                        Skillbox</th>
+                        <th>Python Developer</th>
+                    </tr>
+                    <tr>
+                        <th>2021 - now<br/>
+                        Skillbox</th>
+                        <th>Data Science</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="experience">
+                <h2>Experience</h2>
+                <table class="experience-table">
+                    <tr>
+                        <th>2019 - now<br/>
+                            Skillbox
+                        </th>
+                        <th>Learning practice</th>
+                    </tr>
+                    <tr>
+                        <th>2022 - now<br/>
+                        Rolling Scopes School</th>
+                        <th>Learning practice</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="about-me">
+                <h2><a id="about-me">About me</a></h2>
+                <p>
+                    I am a beginner in IT. I know python and some of its frameworks. 
+                    For example: Pandas, numpy, sklearn, matplotlib, seaborn, tensorflow, django. 
+                    I am interested in front-end and data analysis in the field of CV.
+                </p>
+            </div>
+
+    </main>
+    <footer class="contacts">
+        <h2><a id="contacts">Contacts</a></h2>
+        <ul>
+            <li><img src="./telegram.png" alt="teleram">@Nemizis</li>
+            <li><img src="./email.png" alt="email">zemnovich@bk.ru</li>
+            <li><img src="./github.png" alt="github">https://github.com/nemizis</li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
